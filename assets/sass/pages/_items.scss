@@ -1,0 +1,51 @@
+.tab-slider {
+  padding: 0;
+  background: transparent;
+
+  .image {
+    height: 300px;
+    overflow: hidden;
+    margin-bottom: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .slick-slider,
+  .slick-track,
+  .slick-list {
+    height: 100%;
+  }
+
+  .item-container {
+    height: calc(100% - 360px);
+    padding: 0 30px;
+    margin-right: 30px;
+  }
+
+  .slick-slide {
+    background: white;
+    padding-bottom: 70px;
+  }
+
+  .slick-arrow {
+    position: absolute;
+    bottom: 40px;
+    top: initial;
+    transition: .3s all;
+
+    &:focus, &:hover {
+      svg {
+        fill: $main-color;
+      }
+    }
+
+    &.slick-next {
+      right: 7%;
+    }
+    &.slick-prev {
+      right: 11%;
+      left: initial;
+    }
+  }
+}

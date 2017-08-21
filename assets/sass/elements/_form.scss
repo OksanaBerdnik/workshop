@@ -1,0 +1,88 @@
+button, input, textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearence: none;
+  background: transparent;
+}
+
+textarea {
+  resize: none;
+  height: 120px;
+}
+
+.form-label {
+  font-size: 12px;
+  color: $main-color;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.simple-btn {
+  border: none;
+  padding: 0;
+}
+
+.form-field {
+  margin-bottom: 15px;
+
+  input, textarea {
+    border: 1px solid $main-color;
+    padding: 12px 20px;
+    font: 16px $main-font;
+    color: #272727;
+    width: 100%;
+    display: block;
+
+    &:focus::-webkit-input-placeholder {
+      color: transparent;
+    }
+    &:focus::-moz-placeholder {
+      color: transparent;
+    }
+    &:focus:-ms-input-placeholder {
+      color: transparent;
+    }
+    &:focus:-moz-placeholder {
+      color: transparent;
+    }
+
+    &::-webkit-input-placeholder {
+      color: #bbbbbb;
+      font: italic normal 14px $main-font;
+    }
+    &::-moz-placeholder {
+      color: #bbbbbb;
+      font: italic normal 14px $main-font;
+    }
+    &:-ms-input-placeholder {
+      color: #bbbbbb;
+      font: italic normal 14px $main-font;
+    }
+    &:-moz-placeholder {
+      color: #bbbbbb;
+      font: italic normal 14px $main-font;
+    }
+  }
+
+  &.submit {
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  button[type=submit] {
+    $width: 40px;
+    margin-left: $width + 20px;
+    &:before {
+      width: $width;
+      left: -($width + 20px);
+    }
+  }
+}
+
+.map {
+  width: 100%;
+  height: 400px;
+  background: green;
+  margin-top: 60px;
+}

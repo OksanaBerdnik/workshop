@@ -1,0 +1,22 @@
+//elements
+@import "./elements/slick";
+@import "./elements/slick-theme";
+
+//layout
+@import "./layout/variables";
+@import "./layout/reset";
+@import "./layout/grid";
+@import "./layout/layout";
+@import "./layout/header";
+@import "./layout/footer";
+
+//elements
+@import "./elements/scrollbar";
+@import "./elements/form";
+
+//pages
+@import "./pages/main";
+@import "./pages/carpenter";
+@import "./pages/galery";
+@import "./pages/about";
+@import "./pages/items";

@@ -1,0 +1,109 @@
+.burger {
+  display: none;
+}
+
+.header {
+  text-transform: uppercase;
+  max-height: 100px;
+  position: relative;
+
+  .logo {
+    color: $main-color;
+    font-size: 24px;
+  }
+
+  .decor {
+    margin-left: 35px;
+
+    &:before {
+      left: -35px;
+    }
+  }
+
+  nav {
+    a {
+      padding: 40px 15px;
+      position: relative;
+      transition: .3s all;
+      opacity: 0.8;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: white;
+
+      &:hover, &:focus, &.active {
+        &:after {
+          content: '';
+          display: block;
+          width: 2px;
+          height: 30px;
+          background: $main-color;
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          transition: .3s all;
+        }
+      }
+
+      &.active {
+        color: $main-color;
+      }
+    }
+
+    .contacts {
+      color: $main-color;
+    }
+  }
+}
+
+@media all and (max-width: 991px) {
+  .burger {
+    fill: $main-color;
+    display: block;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  .header {
+    padding: 10px;
+
+    .logo {
+      font-size: 18px;
+    }
+
+    nav {
+      position: absolute;
+      z-index: 1;
+      background: #f7f7f7;
+      top: 0;
+      right: 0;
+      padding: 40px 0 10px;
+      width: 150px;
+      text-align: right;
+      margin-right: -150px;
+      transition: .3s all;
+
+      &.opened {
+        margin-right: 0;
+      }
+
+      a {
+        display: block;
+        color: #272727;
+        padding: 10px;
+
+        &.contacts {
+          margin: 0;
+        }
+
+        &:hover, &:focus, &.active, &.contacts {
+          &:before, &:after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

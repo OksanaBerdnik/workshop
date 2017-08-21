@@ -1,0 +1,19 @@
+//@import url('https://fonts.googleapis.com/css?family=PT+Sans|PT+Serif');
+@font-face {
+  font-family: 'pt_sans';
+  src: url(../fonts/pt_sans.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'pt_serif';
+  src: url(../fonts/pt_serif.ttf) format('truetype');
+}
+
+//$main-font: 'PT Sans', sans-serif;
+//$secondary-font: 'PT Serif', serif;
+
+$main-font: 'pt_sans', sans-serif;
+$secondary-font: 'pt_serif', serif;
+
+$main-color: #bda67c;
+$secondary-color: #272727;

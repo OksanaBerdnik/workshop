@@ -1,0 +1,176 @@
+//headings
+.heading {
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+  font-size: 50px;
+  margin-bottom: 60px;
+
+  &--margin {
+    margin-left: 70px;
+    margin-right: 70px;
+  }
+}
+
+.md-title {
+  font-size: 30px;
+}
+
+.sm-title {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.heading,
+.md-title,
+.sm-title {
+  font-weight: 700;
+  color: $main-color;
+}
+
+.subtitle {
+  opacity: 0.5;
+  color: #272727;
+  font-size: 14px;
+  margin-bottom: 15px;
+  font-weight: normal;
+}
+
+h1, h2, h3, h4, h5, h6, .logo {
+  font-family: $secondary-font;
+  line-height: 1.1;
+}
+
+p {
+  line-height: 1.5;
+
+  &:not(:last-child) {
+    margin-bottom: 25px;
+  }
+}
+
+.align-c {
+  text-align: center;
+}
+
+.link{
+  text-transform: uppercase;
+  color: $main-color;
+  font-weight: bold;
+}
+
+.decor {
+  position: relative;
+
+  &:before {
+    content: '';
+    display: block;
+    //width: 30px;
+    height: 2px;
+    background: $main-color;
+    position: absolute;
+    top: 50%;
+    //left: -50px;
+    transform: translateY(-50%);
+  }
+
+  &--sm-heading {
+    $width: 40px;
+    padding-left: $width + 20px;
+    &:before {
+      width: $width;
+      left: 0;
+    }
+  }
+
+  &--md-heading {
+    $width: 50px;
+    &:before {
+      width: $width;
+      left: -($width - 20px);
+    }
+  }
+
+  &--heading {
+    $width: 150px;
+    &:before {
+      width: $width;
+      left: -($width + 50px);
+    }
+  }
+
+  &--link {
+    $width: 30px;
+    &:before {
+      width: $width;
+      left: -($width + 20px);
+    }
+  }
+}
+
+//LISTS
+.list-inline {
+  li {
+    display: inline-block;
+  }
+}
+
+.link-list {
+  & > li {
+    padding: 0 35px;
+  }
+}
+
+.equal-item {
+  & > li {
+    flex: 1;
+  }
+}
+
+.full-list {
+  & > li {
+    margin-bottom: 15px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.flex {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.flex-c {
+  align-items: center;
+}
+
+.flex-start {
+  align-items: flex-start;
+}
+
+.flex-i-start {
+  justify-content: flex-start;
+}
+
+.nowrap {
+  flex-wrap: nowrap;
+}
+
+.scroll-part {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: calc(100% - 100px);
+}
+
+.image {
+  img {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  }
+}
+
+@media all and (max-height: 900px) {
+  .tab-container {
+    height: 100%;
+  }
+}
