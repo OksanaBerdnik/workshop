@@ -32,12 +32,13 @@ html {
 }
 html, body {
   height: 100%;
+  min-height: 500px;
 }
 body {
   font-family: $main-font;
   font-size: 18px;
   overflow-x: hidden;
-  line-height: 1;
+  line-height: 1.2;
 }
 ol, ul {
   list-style: none;
@@ -62,6 +63,9 @@ a {
     color: $main-color !important;
   }
 }
+a, h1, h2, h3, h4, h5, h6 {
+  word-break: break-word;
+}
 svg {
   vertical-align: middle;
   display: inline-block;
@@ -85,5 +89,11 @@ address {
     &:last-child {
       margin-bottom: 0;
     }
+  }
+}
+
+@media all and (max-width: 767px) {
+  body {
+    font-size: 14px;
   }
 }

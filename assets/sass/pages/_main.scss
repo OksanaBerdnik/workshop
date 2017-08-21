@@ -10,6 +10,7 @@
 
   main {
     height: calc(100% - 315px);
+    justify-content: center;
   }
 
   .heading {
@@ -61,7 +62,7 @@
       transition: .6s;
       padding: 0 10px;
 
-      &:hover {
+      &:hover, &:focus {
         transform: scale(1.55);
       }
     }
@@ -71,10 +72,58 @@
 .main-page {
   .description {
     max-width: 550px;
-    width: 80%;
+    width: 95%;
 
     p {
       font-size: 15px;
+    }
+  }
+}
+
+@media all and (max-height: 767px), all and (max-width: 767px) {
+  .dashboard {
+    header {
+      padding: 20px 10px;
+    }
+
+    .heading {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .subheading {
+      padding: 0 65px;
+      font-size: 12px;
+    }
+
+    .dashboard-list {
+      li {
+        &:hover, &:focus {
+          transform: scale(1.2);
+        }
+      }
+    }
+
+    main {
+      height: calc(100% - 165px);
+    }
+
+    .footer {
+      padding: 20px 10px;
+    }
+  }
+}
+
+@media all and (max-width: 599px) {
+  .dashboard {
+    .dashboard-list {
+      li {
+        width: 280px;
+
+        &:hover, &:focus {
+          transform: scale(1.1);
+        }
+      }
     }
   }
 }

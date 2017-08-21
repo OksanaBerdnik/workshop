@@ -4,6 +4,8 @@
 
   .image {
     height: 300px;
+    max-height: 300px;
+    max-width: initial;
     overflow: hidden;
     margin-bottom: 60px;
     display: flex;
@@ -25,7 +27,7 @@
 
   .slick-slide {
     background: white;
-    padding-bottom: 70px;
+    padding-bottom: 40px;
   }
 
   .slick-arrow {
@@ -46,6 +48,52 @@
     &.slick-prev {
       right: 11%;
       left: initial;
+    }
+  }
+}
+
+@media all and (max-width: 767px) {
+  .tab-slider {
+    .image {
+      height: 200px;
+      margin-bottom: 30px;
+    }
+
+    .item-container {
+      height: calc(100% - 230px);
+      margin-right: 15px;
+    }
+
+    .slick-arrow {
+      bottom: 0;
+
+      svg {
+        width: 25px;
+        height: 25px;
+      }
+
+      &.slick-next {
+        right: 6%;
+      }
+
+      &.slick-prev {
+        right: 12%;
+      }
+    }
+  }
+}
+
+@media all and (max-height: 900px) {
+  .tcontainer {
+    height: 100%;
+
+    .image {
+      height: 40%;
+      margin-bottom: 3%;
+    }
+
+    .item-container {
+      height: 50%;
     }
   }
 }

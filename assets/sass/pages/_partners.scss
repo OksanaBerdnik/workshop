@@ -1,0 +1,35 @@
+.partners {
+  &.full-list {
+    li {
+      margin-bottom: 35px;
+    }
+  }
+
+  .image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media all and (max-width: 1199px) and (min-width: 768px) {
+  .partners {
+    .image {
+      width: 360px;
+      padding-right: 0;
+    }
+
+    .description {
+      width: calc(100% - 370px);
+      padding: 0 30px
+    }
+  }
+}
+
+@media all and (max-width: 767px) {
+  .partners {
+    .description {
+      width: 100%;
+    }
+  }
+}

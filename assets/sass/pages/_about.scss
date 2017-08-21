@@ -13,3 +13,13 @@
     }
   }
 }
+
+@media all and (max-width: 767px) {
+  .statistic {
+    li {
+      span {
+        font-size: 30px;
+      }
+    }
+  }
+}

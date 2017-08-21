@@ -40,6 +40,10 @@ $(function() {
         $('.header nav').toggleClass('opened');
     });
 
+    $('.menu-opener').on('click', function() {
+        $('.menu').slideToggle();
+    });
+
     $('.item-slider').slick({
        slidesToShow: 1,
        slidesToScroll: 1,

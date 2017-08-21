@@ -130,7 +130,7 @@ p {
     margin-bottom: 15px;
 
     &:last-child {
-      margin-bottom: 0;
+      margin-bottom: 0 !important;
     }
   }
 }
@@ -139,14 +139,11 @@ p {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+  position: relative;
 }
 
 .flex-c {
   align-items: center;
-}
-
-.flex-start {
-  align-items: flex-start;
 }
 
 .flex-i-start {
@@ -166,11 +163,78 @@ p {
 .image {
   img {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    min-height: 100%;
+    min-width: 100%;
   }
 }
 
-@media all and (max-height: 900px) {
-  .tab-container {
-    height: 100%;
+@media all and (max-width: 991px) {
+  .link-list {
+    & > li {
+      padding: 0 20px;
+    }
+  }
+
+  .heading {
+    font-size: 30px;
+    margin-bottom: 30px;
+
+    &--margin {
+      margin-right: 30px;
+      margin-left: 30px;
+    }
+  }
+
+  .md-title {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+
+  .decor {
+    //
+    //&--sm-heading {
+    //  $width: 40px;
+    //  padding-left: $width + 20px;
+    //  &:before {
+    //    width: $width;
+    //    left: 0;
+    //  }
+    //}
+    //
+    &--md-heading {
+      $width: 30px;
+      &:before {
+        width: $width;
+        left: -($width);
+      }
+    }
+
+    &--heading {
+      $width: 100px;
+      &:before {
+        width: $width;
+        left: -($width + 10px);
+      }
+    }
+
+    &--link {
+      $width: 15px;
+      &:before {
+        width: $width;
+        left: -($width + 15px);
+      }
+    }
+  }
+}
+
+@media all and (max-width: 767px) {
+  .flex {
+    .image {
+      order: -1;
+      width: 100%;
+      max-width: 340px;
+      padding: 0 10px;
+      margin: 0 auto 30px;
+    }
   }
 }
