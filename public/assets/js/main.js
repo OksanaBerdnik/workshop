@@ -6,15 +6,29 @@ function hasScroll() {
 
     if(documentHeight > windowHeight) {
         $('main > .tab-container').css({'height' : '100%'});
-        console.log(windowHeight);
     }
+}
 
-    console.log($('main > .tab-container'))
+function myMap() {
+    var mapCanvas = document.getElementById("googleMap");
+    var myCenter = new google.maps.LatLng(49.443528, 32.058764);
+    var mapOptions = {center: myCenter, zoom: 18};
+    var map = new google.maps.Map(mapCanvas,mapOptions);
+    var marker = new google.maps.Marker({
+        position: myCenter,
+        // icon: "/img/pointer.png"
+    });
+    marker.setMap(map);
 }
 
 hasScroll();
 
 $(function() {
+
+    if($('#googleMap').length) {
+        myMap();
+    }
+
     $(window).resize( function() {
         if ($(window).height() > 900) {
             hasScroll();

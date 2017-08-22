@@ -9,7 +9,8 @@
     <meta content="index,follow" name="robots">
     <link rel="stylesheet" type="text/css" href="/public/assets/css/main.css">
 </head>
-<body class="forging-site-main main-page">
+<body>
+<div class="blur-box forging-site-main"></div>
 <svg style="display:none;">
     <symbol id="arrowLeft" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129">
         <title>Arrow left</title>
@@ -38,12 +39,35 @@
         <a href="/public/view/forging/contacts.html" class="decor decor--link contacts">Контакты</a>
     </nav>
 </header>
-<main class="container flex flex-c">
-    <section class="description">
-        <h1 class="heading decor decor--heading">Мы куем лучшие металлические изделия</h1>
-        <p><b>15 лет опыта</b> и настоящей преданности делу вдохновили нас на создание <b>более 30 000 изделий для клиентов со всей Украины</b>. Неизменное <b>качество сплавов и кропотливый труд</b> лучших мастеров - это единственный секрет нашего успеха на рынке.</p>
-        <a href="#" class="decor link decor--sm-heading">галерея продуктов</a>
-    </section>
+<main class="flex flex-c">
+    <div class="tcontainer tab-slider">
+        <ul class="item-slider">
+            <li class="item">
+                <div class="image">
+                    <img src="/public/assets/images/carpenter/item.jpg" alt="Item">
+                </div>
+                <div class="flex flex-i-start scroll-part item-container">
+                    <h2 class="md-title decor decor--md-heading xs-40 sm-100 left-column">Натуральный шкаф для спальной</h2>
+                    <div class="description xs-50 sm-100 right-column">
+                        <p>Изготовление столярных изделий: дверей, окон, лестниц, предметов интерьера, оформление дизайна интерьера помещений производится "под ключ".</p>
+                        <p>Наши специалисты выезжают на место, делают необходимые замеры, выполняют проектирование по Вашим эскизам.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="item">
+                <div class="image">
+                    <img src="/public/assets/images/carpenter/item.jpg" alt="Item">
+                </div>
+                <div class="flex flex-i-start scroll-part item-container">
+                    <h2 class="md-title decor decor--md-heading xs-40 sm-100 left-column">Натуральный шкаф для спальной</h2>
+                    <div class="description xs-50 sm-100 right-column">
+                        <p>Изготовление столярных изделий: дверей, окон, лестниц, предметов интерьера, оформление дизайна интерьера помещений производится "под ключ".</p>
+                        <p>Наши специалисты выезжают на место, делают необходимые замеры, выполняют проектирование по Вашим эскизам.</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
 </main>
 <footer class="container flex footer">
     <ul class="list-inline link-list">
@@ -68,5 +92,6 @@
 <script src="/public/assets/vendor/jquery/jquery.min.js"></script>
 <script src="/public/assets/vendor/slick/slick.min.js"></script>
 <script src="/public/assets/js/main.js"></script>
+
 </body>
 </html>

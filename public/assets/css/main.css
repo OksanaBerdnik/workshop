@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /* Slider */
+@import url("https://fonts.googleapis.com/css?family=PT+Sans|PT+Serif");
 .slick-slider {
   position: relative;
   display: block;
@@ -199,12 +200,6 @@
       color: black;
       opacity: 0.75; }
 
-@font-face {
-  font-family: 'pt_sans';
-  src: url(../fonts/pt_sans.ttf) format("truetype"); }
-@font-face {
-  font-family: 'pt_serif';
-  src: url(../fonts/pt_serif.ttf) format("truetype"); }
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -242,7 +237,7 @@ html, body {
   min-height: 500px; }
 
 body {
-  font-family: "pt_sans", sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   overflow-x: hidden;
   line-height: 1.2; }
@@ -382,14 +377,14 @@ body:not(.main-page) main.container {
 
   .tab-container, .tcontainer {
     padding: 30px 15px; } }
-@media all and (max-height: 767px) {
+@media all and (max-height: 767px) and (max-width: 767px) {
   body:not(.dashboard) main {
     height: initial;
     min-height: calc(100% - 130px); } }
 .heading {
   text-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
   font-size: 50px;
-  margin-bottom: 60px; }
+  margin-bottom: 25px; }
   .heading--margin {
     margin-left: 70px;
     margin-right: 70px; }
@@ -415,7 +410,7 @@ body:not(.main-page) main.container {
   font-weight: normal; }
 
 h1, h2, h3, h4, h5, h6, .logo {
-  font-family: "pt_serif", serif;
+  font-family: "PT Serif", serif;
   line-height: 1.1; }
 
 p {
@@ -621,7 +616,7 @@ p {
 @media all and (max-width: 1336px) and (max-height: 767px) {
   .footer {
     max-height: 60px; }
-    .footer .container {
+    .footer.container {
       padding: 20px 10px; } }
 @media all and (max-width: 991px) {
   .footer {
@@ -671,7 +666,7 @@ textarea {
   .form-field input, .form-field textarea {
     border: 1px solid #bda67c;
     padding: 12px 20px;
-    font: 16px "pt_sans", sans-serif;
+    font: 16px "PT Sans", sans-serif;
     color: #272727;
     width: 100%;
     display: block; }
@@ -685,16 +680,16 @@ textarea {
       color: transparent; }
     .form-field input::-webkit-input-placeholder, .form-field textarea::-webkit-input-placeholder {
       color: #bbbbbb;
-      font: italic normal 14px "pt_sans", sans-serif; }
+      font: italic normal 14px "PT Sans", sans-serif; }
     .form-field input::-moz-placeholder, .form-field textarea::-moz-placeholder {
       color: #bbbbbb;
-      font: italic normal 14px "pt_sans", sans-serif; }
+      font: italic normal 14px "PT Sans", sans-serif; }
     .form-field input:-ms-input-placeholder, .form-field textarea:-ms-input-placeholder {
       color: #bbbbbb;
-      font: italic normal 14px "pt_sans", sans-serif; }
+      font: italic normal 14px "PT Sans", sans-serif; }
     .form-field input:-moz-placeholder, .form-field textarea:-moz-placeholder {
       color: #bbbbbb;
-      font: italic normal 14px "pt_sans", sans-serif; }
+      font: italic normal 14px "PT Sans", sans-serif; }
   .form-field.submit {
     justify-content: flex-end;
     width: 100%; }
@@ -783,6 +778,11 @@ textarea {
   background-size: cover;
   color: white; }
 
+.forging-site-main {
+  background: url(/public/assets/images/forging/main_bg.jpg) no-repeat 50% 100%;
+  background-size: cover;
+  color: white; }
+
 .blur-box {
   filter: blur(5px);
   position: fixed;
@@ -865,7 +865,7 @@ textarea {
     font-size: 16px; }
     .statistic li span {
       display: block;
-      font: bold 50px "pt_serif", serif;
+      font: bold 50px "PT Serif", serif;
       color: #bda67c; }
 
 @media all and (max-width: 767px) {
@@ -910,7 +910,8 @@ textarea {
 @media all and (max-width: 767px) {
   .tab-slider .image {
     height: 200px;
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    padding: 0; }
   .tab-slider .item-container {
     height: calc(100% - 230px);
     margin-right: 15px; }
@@ -924,20 +925,20 @@ textarea {
     .tab-slider .slick-arrow.slick-prev {
       right: 12%; } }
 @media all and (max-height: 900px) {
-  .tcontainer {
-    height: 100%; }
-    .tcontainer .image {
-      height: 40%;
-      margin-bottom: 3%; }
-    .tcontainer .item-container {
-      height: 50%; } }
+  .tcontainer .image {
+    height: 40%;
+    margin-bottom: 3%; }
+  .tcontainer .item-container {
+    height: 50%; }
+
+  .tab-container, .tcontainer, .tcontainer {
+    height: 100%; } }
 .contacts .flex {
   align-items: stretch; }
 
 .map {
   width: 100%;
   height: 400px;
-  background: green;
   margin: 60px 70px 0; }
 
 @media all and (max-width: 991px) {

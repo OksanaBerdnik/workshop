@@ -9,7 +9,8 @@
     <meta content="index,follow" name="robots">
     <link rel="stylesheet" type="text/css" href="/public/assets/css/main.css">
 </head>
-<body class="forging-site-main main-page">
+<body>
+<div class="blur-box forging-site-main"></div>
 <svg style="display:none;">
     <symbol id="arrowLeft" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129">
         <title>Arrow left</title>
@@ -38,12 +39,39 @@
         <a href="/public/view/forging/contacts.html" class="decor decor--link contacts">Контакты</a>
     </nav>
 </header>
-<main class="container flex flex-c">
-    <section class="description">
-        <h1 class="heading decor decor--heading">Мы куем лучшие металлические изделия</h1>
-        <p><b>15 лет опыта</b> и настоящей преданности делу вдохновили нас на создание <b>более 30 000 изделий для клиентов со всей Украины</b>. Неизменное <b>качество сплавов и кропотливый труд</b> лучших мастеров - это единственный секрет нашего успеха на рынке.</p>
-        <a href="#" class="decor link decor--sm-heading">галерея продуктов</a>
-    </section>
+<main class="flex flex-c">
+    <div class="tab-container">
+        <h1 class="heading heading--margin decor decor--heading ">О нас</h1>
+        <div class="flex scroll-part">
+            <div class="xs-50 sm-100 left-column">
+                <p>Деревообработка является многопродуктовым производством и связана практически со всеми областями материального производства.
+                </p>
+                <p>Изготавливая деревянные изделия, мы ориентируемся на индивидуального заказчика, делая основной упор на качество и долговечность изделий из дерева.
+                    Мы используем в столярном производстве только собственные пиломатериалы, лучшие отделочные материалы. Особое внимание уделяется качественной сушке, транспортировке и складированию материалов.</p>
+                <ul class="flex equal-item statistic">
+                    <li>
+                        <span>36</span>
+                        Профессиональных столяров
+                    </li>
+                    <li>
+                        <span>15</span>
+                        Лидирующих лет на рынке
+                    </li>
+                    <li>
+                        <span>729</span>
+                        Уникальных проектов
+                    </li>
+                </ul>
+                <p>
+                    Изготовление столярных изделий: дверей, окон, лестниц, предметов интерьера, оформление дизайна интерьера помещений производится как "под ключ" с установкой, так и в уже существующих интерьерах.
+                    Наши специалисты выезжают на место, делают необходимые замеры, выполняют проектирование по Вашим эскизам.
+                </p>
+            </div>
+            <div class="image xs-50 sm-100 right-column">
+                <img src="/public/assets/images/forging/item.jpg" alt="About Us">
+            </div>
+        </div>
+    </div>
 </main>
 <footer class="container flex footer">
     <ul class="list-inline link-list">
@@ -64,7 +92,6 @@
     </ul>
     <p class="copyright">2017 Workshop of Nature. All rights reserved.</p>
 </footer>
-
 <script src="/public/assets/vendor/jquery/jquery.min.js"></script>
 <script src="/public/assets/vendor/slick/slick.min.js"></script>
 <script src="/public/assets/js/main.js"></script>

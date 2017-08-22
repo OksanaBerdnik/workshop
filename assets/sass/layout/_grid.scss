@@ -131,7 +131,7 @@ body:not(.main-page) {
   }
 }
 
-@media all and (max-height: 767px) {
+@media all and (max-height: 767px) and (max-width: 767px) {
   body:not(.dashboard) {
     main {
       height: initial;
