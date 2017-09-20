@@ -4,13 +4,19 @@
 
   .image {
     height: 300px;
-    max-height: 300px;
     max-width: initial;
     overflow: hidden;
     margin-bottom: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
+    img {
+      max-width: initial;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      position: absolute;
+    }
   }
 
   .slick-slider,
@@ -52,6 +58,50 @@
   }
 }
 
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+
+  svg {
+    fill: black;
+  }
+}
+
+.galery-slider {
+  position: absolute;
+  max-width: 1170px;
+  width: 90%;
+  max-height: 90vh;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 4;
+
+  .tab-slider {
+    height: 100%;
+  }
+
+  .slick-slide {
+    display: flex !important;
+    padding: 0;
+  }
+
+  .image {
+    height: 100% !important;
+    margin-bottom: 0 !important;
+  }
+
+  .item-container {
+    max-height: 100%;
+    padding: 30px 30px 30px 0;
+    height: 100% !important;
+    margin: 0 !important;
+  }
+}
+
 @media all and (max-width: 767px) {
   .tab-slider {
     .image {
@@ -82,6 +132,16 @@
       }
     }
   }
+
+  .galery-slider {
+    .image {
+      width: 40%;
+    }
+
+    .item-container {
+      padding: 30px 15px;
+    }
+  }
 }
 
 @media all and (max-height: 900px) {
@@ -98,5 +158,11 @@
 
   .tab-container, .tcontainer {
     height: 100%;
+  }
+}
+
+@media all and (min-height: 900px) {
+  .galery-slider {
+    height: 700px;
   }
 }

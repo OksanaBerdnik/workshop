@@ -5,6 +5,10 @@ button, input, textarea {
   background: transparent;
 }
 
+button {
+  cursor: pointer;
+}
+
 textarea {
   resize: none;
   height: 120px;

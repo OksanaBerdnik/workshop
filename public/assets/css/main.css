@@ -351,7 +351,8 @@ body:not(.main-page) main.container {
   .columns .item {
     display: inline-block;
     margin-bottom: 25px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15); }
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+    cursor: pointer; }
   .columns img {
     width: 100%; }
   .columns .body {
@@ -375,12 +376,28 @@ body:not(.main-page) main.container {
   .sm-100 {
     width: 100%; }
 
+  .sm-60 {
+    width: 60%; }
+
+  .sm-25 {
+    width: 25%; }
+
   .tab-container, .tcontainer {
     padding: 30px 15px; } }
 @media all and (max-height: 767px) and (max-width: 767px) {
   body:not(.dashboard) main {
     height: initial;
     min-height: calc(100% - 130px); } }
+.shadow {
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 3; }
+
 .heading {
   text-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
   font-size: 50px;
@@ -390,7 +407,8 @@ body:not(.main-page) main.container {
     margin-right: 70px; }
 
 .md-title {
-  font-size: 30px; }
+  font-size: 30px;
+  margin-bottom: 20px; }
 
 .sm-title {
   font-size: 24px;
@@ -485,10 +503,12 @@ p {
   overflow-x: hidden;
   height: calc(100% - 100px); }
 
-.image img {
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
-  min-height: 100%;
-  min-width: 100%; }
+.image {
+  position: relative; }
+  .image img {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    min-height: 100%;
+    min-width: 100%; }
 
 @media all and (max-width: 991px) {
   .link-list > li {
@@ -645,6 +665,9 @@ button, input, textarea {
   -moz-appearance: none;
   appearence: none;
   background: transparent; }
+
+button {
+  cursor: pointer; }
 
 textarea {
   resize: none;
@@ -876,13 +899,18 @@ textarea {
   background: transparent; }
   .tab-slider .image {
     height: 300px;
-    max-height: 300px;
     max-width: initial;
     overflow: hidden;
     margin-bottom: 60px;
     display: flex;
     align-items: center;
     justify-content: center; }
+    .tab-slider .image img {
+      max-width: initial;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      position: absolute; }
   .tab-slider .slick-slider,
   .tab-slider .slick-track,
   .tab-slider .slick-list {
@@ -907,6 +935,38 @@ textarea {
       right: 11%;
       left: initial; }
 
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1; }
+  .close-btn svg {
+    fill: black; }
+
+.galery-slider {
+  position: absolute;
+  max-width: 1170px;
+  width: 90%;
+  max-height: 90vh;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 4; }
+  .galery-slider .tab-slider {
+    height: 100%; }
+  .galery-slider .slick-slide {
+    display: flex !important;
+    padding: 0; }
+  .galery-slider .image {
+    height: 100% !important;
+    margin-bottom: 0 !important; }
+  .galery-slider .item-container {
+    max-height: 100%;
+    padding: 30px 30px 30px 0;
+    height: 100% !important;
+    margin: 0 !important; }
+
 @media all and (max-width: 767px) {
   .tab-slider .image {
     height: 200px;
@@ -923,7 +983,12 @@ textarea {
     .tab-slider .slick-arrow.slick-next {
       right: 6%; }
     .tab-slider .slick-arrow.slick-prev {
-      right: 12%; } }
+      right: 12%; }
+
+  .galery-slider .image {
+    width: 40%; }
+  .galery-slider .item-container {
+    padding: 30px 15px; } }
 @media all and (max-height: 900px) {
   .tcontainer .image {
     height: 40%;
@@ -933,6 +998,9 @@ textarea {
 
   .tab-container, .tcontainer, .tcontainer {
     height: 100%; } }
+@media all and (min-height: 900px) {
+  .galery-slider {
+    height: 700px; } }
 .contacts .flex {
   align-items: stretch; }
 

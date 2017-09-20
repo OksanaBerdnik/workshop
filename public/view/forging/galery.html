@@ -22,6 +22,10 @@
         <path d="M0 326.1c0 4.3 3.3 7.7 7.7 7.7h596.5c4.3 0 7.7-3.6 7.7-7.7v-40.2c0-4.3-3.3-7.7-7.7-7.7H7.7c-4.3 0-7.7 3.6-7.7 7.7V326.1z"></path>
         <path d="M0 465.2c0 4.3 3.3 7.7 7.7 7.7h596.5c4.3 0 7.7-3.6 7.7-7.7v-40.2c0-4.3-3.3-7.7-7.7-7.7H7.7c-4.3 0-7.7 3.6-7.7 7.7V465.2z"></path>
     </symbol>
+    <symbol id="close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 174.2 174.2">
+        <path d="M87.1 0C39.1 0 0 39.1 0 87.1s39.1 87.1 87.1 87.1 87.1-39.1 87.1-87.1S135.2 0 87.1 0zM87.1 159.3c-39.8 0-72.2-32.4-72.2-72.2S47.3 14.9 87.1 14.9s72.2 32.4 72.2 72.2S126.9 159.3 87.1 159.3z"></path>
+        <path d="M120.8 53.4c-2.9-2.9-7.6-2.9-10.6 0L87.1 76.6 64 53.4c-2.9-2.9-7.6-2.9-10.6 0s-2.9 7.6 0 10.6l23.2 23.2L53.4 110.3c-2.9 2.9-2.9 7.6 0 10.6 1.5 1.5 3.4 2.2 5.3 2.2 1.9 0 3.8-0.7 5.3-2.2L87.1 97.7l23.2 23.2c1.5 1.5 3.4 2.2 5.3 2.2 1.9 0 3.8-0.7 5.3-2.2 2.9-2.9 2.9-7.6 0-10.6L97.7 87.1l23.2-23.2C123.7 61.1 123.7 56.3 120.8 53.4z"></path>
+    </symbol>
 </svg>
 <header class="container flex flex-c header">
     <a href="/" class="logo">Мастерская природы</a>
@@ -39,6 +43,43 @@
         <a href="/public/view/forging/contacts.html" class="decor decor--link contacts">Контакты</a>
     </nav>
 </header>
+<div class="modal galery-slider" style="display: none;">
+    <button type="button" class="simple-btn close-btn">
+        <svg height="30" width="30">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use>
+        </svg>
+    </button>
+    <ul class="tab-slider">
+        <li class="item flex nowrap flex-c">
+            <div class="image xs-60">
+                <img src="/public/assets/images/carpenter/item.jpg" alt="Item">
+            </div>
+            <div class="xs-40 sm-60 item-container">
+                <div class="scroll-part flex-c flex">
+                    <h2 class="md-title decor decor--md-heading left-column">Натуральный шкаф для спальной</h2>
+                    <div class="description right-column">
+                        <p>Изготовление столярных изделий: дверей, окон, лестниц, предметов интерьера, оформление дизайна интерьера помещений производится "под ключ".</p>
+                        <p>Наши специалисты выезжают на место, делают необходимые замеры, выполняют проектирование по Вашим эскизам.</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="item flex nowrap flex-c">
+            <div class="image xs-60">
+                <img src="/public/assets/images/carpenter/item.jpg" alt="Item">
+            </div>
+            <div class="xs-40 sm-60 item-container">
+                <div class="scroll-part flex-c flex">
+                    <h2 class="md-title decor decor--md-heading left-column">Натуральный шкаф для спальной</h2>
+                    <div class="description right-column">
+                        <p>Изготовление столярных изделий: дверей, окон, лестниц, предметов интерьера, оформление дизайна интерьера помещений производится "под ключ".</p>
+                        <p>Наши специалисты выезжают на место, делают необходимые замеры, выполняют проектирование по Вашим эскизам.</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
 <main class="flex flex-c">
     <div class="tab-container">
         <h1 class="heading heading--margin decor decor--heading">Галерея лучших работ</h1>
@@ -129,7 +170,7 @@
                 </li>
             </ul>
             <div class="colums-container">
-                <ul class="columns">
+                <ul class="columns galery-items">
                     <li class="item">
                         <div class="item-image">
                             <img src="/public/assets/images/carpenter/item1.jpg" alt="Item">

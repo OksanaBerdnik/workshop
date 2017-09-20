@@ -81,6 +81,7 @@ body:not(.main-page) {
     display: inline-block;
     margin-bottom: 25px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
   }
 
   img {
@@ -124,6 +125,14 @@ body:not(.main-page) {
 @media all and (max-width: 767px) {
   .sm-100 {
     width: 100%;
+  }
+
+  .sm-60 {
+    width: 60%;
+  }
+
+  .sm-25 {
+    width: 25%;
   }
 
   .tab-container {

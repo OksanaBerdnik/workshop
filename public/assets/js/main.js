@@ -4,7 +4,7 @@ function hasScroll() {
 
     $('main > .tab-container').css({'height' : ''});
 
-    if(documentHeight > windowHeight) {
+    if(documentHeight > windowHeight || documentHeight == windowHeight) {
         $('main > .tab-container').css({'height' : '100%'});
     }
 }
@@ -61,9 +61,33 @@ $(function() {
     $('.item-slider').slick({
        slidesToShow: 1,
        slidesToScroll: 1,
-       autoplay: false,
-       // autoplaySpeed: 5000,
+       autoplay: true,
+       autoplaySpeed: 5000,
        prevArrow: '<button type="button" class="slick-prev"><svg height="40" width="40"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrowLeft"></use></svg></button>',
        nextArrow: '<button type="button" class="slick-next"><svg height="40" width="40" style="transform:rotate(180deg)"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrowLeft"></use></svg></button>'
    });
+
+    $('.galery-items .item').on('click', function() {
+        $('.galery-slider').slideDown();
+        $('.shadow').fadeIn();
+
+        if (!$('.galery-slider .tab-slider').hasClass('slick-initialized')) {
+            $('.galery-slider .tab-slider').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 5000,
+                prevArrow: '<button type="button" class="slick-prev"><svg height="40" width="40"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrowLeft"></use></svg></button>',
+                nextArrow: '<button type="button" class="slick-next"><svg height="40" width="40" style="transform:rotate(180deg)"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrowLeft"></use></svg></button>'
+            });
+        }
+
+
+    })
+
+    $('.close-btn').on('click', function() {
+        $(this).parent('.modal').slideUp();
+        // $('.galery-slider .tab-slider').slick('unslick');
+        $('.shadow').fadeOut();
+    })
 });
